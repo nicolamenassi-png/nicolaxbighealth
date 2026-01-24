@@ -39,7 +39,7 @@ export const HeroSection = () => {
                         {/* Subtitle */}
                         <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
                             Proven SEO strategies for mission-driven companies delivered through 
-                            data-driven, evidence-based methodologies. Let's help millions discover 
+                            data-driven, evidence-based methodologies. Let&apos;s help millions discover 
                             better mental health solutions.
                         </p>
 
