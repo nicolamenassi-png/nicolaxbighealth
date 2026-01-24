@@ -1,10 +1,59 @@
-import { useState } from 'react';
-import { ArrowUpRight, Users, TrendingUp, Award, Briefcase, Lightbulb } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, Award, Briefcase, Lightbulb } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 
-export const ProjectsSection = () => {
-    const [activeTab, setActiveTab] = useState('clients');
+const ProjectCard = ({ project, index }) => (
+    <div 
+        className="group bg-card rounded-2xl border border-border hover:border-primary/30 overflow-hidden transition-all duration-300 hover:shadow-bighealth-hover"
+        style={{ animationDelay: `${index * 0.1}s` }}
+    >
+        {/* Header with color accent */}
+        <div 
+            className="h-2" 
+            style={{ backgroundColor: `hsl(var(--${project.color}))` }}
+        />
+        
+        <div className="p-6">
+            {/* Company & Project */}
+            <div className="flex items-start justify-between mb-4">
+                <div>
+                    <span className="text-sm text-muted-foreground">{project.company}</span>
+                    <h3 className="text-xl font-semibold text-foreground">{project.project}</h3>
+                </div>
+                <div className="w-10 h-10 rounded-xl bg-accent-soft flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <ArrowUpRight className="w-5 h-5 text-primary" />
+                </div>
+            </div>
 
+            {/* Type & Description */}
+            <p className="text-sm text-muted-foreground mb-4">{project.type}</p>
+            <p className="text-foreground mb-6">{project.description}</p>
+
+            {/* Results */}
+            <div className="space-y-3 pt-4 border-t border-border">
+                <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <TrendingUp className="w-3.5 h-3.5 text-success" />
+                    </div>
+                    <div>
+                        <span className="text-xs text-muted-foreground uppercase tracking-wider">Results</span>
+                        <p className="text-foreground font-medium">{project.results}</p>
+                    </div>
+                </div>
+                <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Award className="w-3.5 h-3.5 text-primary" />
+                    </div>
+                    <div>
+                        <span className="text-xs text-muted-foreground uppercase tracking-wider">Achievement</span>
+                        <p className="text-foreground font-medium">{project.achievement}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+);
+
+export const ProjectsSection = () => {
     const clientProjects = [
         {
             company: 'Stepstone Group',
@@ -64,58 +113,6 @@ export const ProjectsSection = () => {
             color: 'chart-1'
         }
     ];
-
-    const ProjectCard = ({ project, index }) => (
-        <div 
-            className="group bg-card rounded-2xl border border-border hover:border-primary/30 overflow-hidden transition-all duration-300 hover:shadow-bighealth-hover"
-            style={{ animationDelay: `${index * 0.1}s` }}
-        >
-            {/* Header with color accent */}
-            <div 
-                className="h-2" 
-                style={{ backgroundColor: `hsl(var(--${project.color}))` }}
-            />
-            
-            <div className="p-6">
-                {/* Company & Project */}
-                <div className="flex items-start justify-between mb-4">
-                    <div>
-                        <span className="text-sm text-muted-foreground">{project.company}</span>
-                        <h3 className="text-xl font-semibold text-foreground">{project.project}</h3>
-                    </div>
-                    <div className="w-10 h-10 rounded-xl bg-accent-soft flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                        <ArrowUpRight className="w-5 h-5 text-primary" />
-                    </div>
-                </div>
-
-                {/* Type & Description */}
-                <p className="text-sm text-muted-foreground mb-4">{project.type}</p>
-                <p className="text-foreground mb-6">{project.description}</p>
-
-                {/* Results */}
-                <div className="space-y-3 pt-4 border-t border-border">
-                    <div className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-success/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <TrendingUp className="w-3.5 h-3.5 text-success" />
-                        </div>
-                        <div>
-                            <span className="text-xs text-muted-foreground uppercase tracking-wider">Results</span>
-                            <p className="text-foreground font-medium">{project.results}</p>
-                        </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Award className="w-3.5 h-3.5 text-primary" />
-                        </div>
-                        <div>
-                            <span className="text-xs text-muted-foreground uppercase tracking-wider">Achievement</span>
-                            <p className="text-foreground font-medium">{project.achievement}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
 
     return (
         <section id="projects" className="section-padding bg-warm">
