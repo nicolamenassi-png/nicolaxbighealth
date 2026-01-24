@@ -21,7 +21,7 @@ export const ContactSection = () => {
         // Simulate form submission
         await new Promise(resolve => setTimeout(resolve, 1000));
         
-        toast.success('Message sent! I\'ll get back to you soon.');
+        toast.success('Message sent! I will get back to you soon.');
         setFormData({ name: '', email: '', company: '', message: '' });
         setIsSubmitting(false);
     };
@@ -62,8 +62,8 @@ export const ContactSection = () => {
                         </h2>
 
                         <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
-                            I'm passionate about using SEO to connect people with solutions that genuinely 
-                            improve their lives. Let's talk about how I can help Big Health reach more 
+                            I am passionate about using SEO to connect people with solutions that genuinely 
+                            improve their lives. Let&apos;s talk about how I can help Big Health reach more 
                             people who need accessible mental health care.
                         </p>
 

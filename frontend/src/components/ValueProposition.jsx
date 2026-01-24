@@ -55,7 +55,7 @@ export const ValueProposition = () => {
                     </h2>
                     <p className="text-lg text-muted-foreground">
                         I believe that great SEO is about connecting people with solutions that can genuinely 
-                        improve their lives. That's why I'm passionate about working with companies like Big Health.
+                        improve their lives. That&apos;s why I&apos;m passionate about working with companies like Big Health.
                     </p>
                 </div>
 

@@ -59,7 +59,7 @@ export const TestimonialSection = () => {
                         {/* Testimonial content */}
                         <div className="relative z-10">
                             <blockquote className="text-xl md:text-2xl text-foreground font-serif leading-relaxed mb-8">
-                                "{testimonials[currentIndex].quote}"
+                                &ldquo;{testimonials[currentIndex].quote}&rdquo;
                             </blockquote>
 
                             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
