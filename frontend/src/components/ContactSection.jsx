@@ -53,7 +53,7 @@ export const ContactSection = () => {
                     <div className="text-primary-foreground">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm mb-6">
                             <Heart className="w-4 h-4" />
-                            <span className="text-sm font-medium">Let's Work Together</span>
+                            <span className="text-sm font-medium">Let&apos;s Work Together</span>
                         </div>
 
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6 leading-tight">
