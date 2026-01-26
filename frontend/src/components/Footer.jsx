@@ -6,7 +6,7 @@ export const Footer = () => {
     const exploreLinks = [
         { label: 'About', href: '#about' },
         { label: 'Experience', href: '#experience' },
-        { label: 'Projects', href: '#projects' },
+        { label: 'Strategy', href: '#roadmap' },
         { label: 'Skills', href: '#skills' },
         { label: 'Contact', href: '#contact' },
     ];
