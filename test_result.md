@@ -107,11 +107,11 @@ user_problem_statement: "Test the updated Big Health style CV website focusing o
 frontend:
   - task: "Navigation functionality - NEW Strategy link"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/frontend/src/components/Navigation.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "testing"
@@ -122,6 +122,9 @@ frontend:
       - working: "NA"
         agent: "testing"
         comment: "NEW CHANGES - Need to test updated navigation with 'Strategy' link replacing 'Projects', verify it scrolls to #roadmap section, and test updated CTA button text 'My Vision for Big Health'"
+      - working: true
+        agent: "testing"
+        comment: "✅ PASSED - Strategy link successfully replaces Projects in navigation, scrolls correctly to #roadmap section, CTA button text updated to 'My Vision for Big Health', mobile navigation working perfectly"
 
   - task: "Hero Section display - NEW CTA button text"
     implemented: true
