@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Mail, Sparkles, Heart, Brain, TrendingUp } from 'lucide-react';
+import { ArrowRight, Download, Sparkles, Heart, Brain } from 'lucide-react';
 import { Button } from './ui/button';
 
 export const HeroSection = () => {
@@ -31,27 +31,21 @@ export const HeroSection = () => {
 
                         {/* Main Headline */}
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight">
-                            The new standard in{' '}
-                            <span className="italic text-primary">accessible</span>, effective{' '}
-                            <span className="italic">digital growth</span>
+                            The Strategic Value I Bring to{' '}
+                            <span className="italic text-primary">Big Health</span>
                         </h1>
 
                         {/* Subtitle */}
                         <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-                            Proven SEO strategies for mission-driven companies delivered through 
-                            data-driven, evidence-based methodologies. Let&apos;s help millions discover 
-                            better mental health solutions.
+                            Scaling digital therapeutics through technical excellence, E-E-A-T integrity, 
+                            and patient-centered search intelligence.
                         </p>
 
-                        {/* CTA Buttons */}
+                        {/* Single CTA Button */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a href="#contact" className="btn-bighealth text-base px-8 py-4">
-                                Get in Touch
-                                <ArrowRight className="w-5 h-5" />
-                            </a>
-                            <a href="#vision-pdf" className="btn-secondary text-base px-8 py-4">
-                                <Download className="w-5 h-5" />
+                            <a href="#my-vision-big-health" className="btn-bighealth text-base px-8 py-4">
                                 My Vision for Big Health
+                                <ArrowRight className="w-5 h-5" />
                             </a>
                         </div>
 

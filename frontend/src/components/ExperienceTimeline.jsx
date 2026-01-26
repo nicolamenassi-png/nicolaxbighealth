@@ -1,4 +1,4 @@
-import { MapPin, Calendar, Briefcase, ExternalLink } from 'lucide-react';
+import { MapPin, Calendar } from 'lucide-react';
 import { Badge } from './ui/badge';
 
 export const ExperienceTimeline = () => {
@@ -17,22 +17,9 @@ export const ExperienceTimeline = () => {
             color: 'chart-1'
         },
         {
-            period: '2018 - 2023',
-            type: 'Entrepreneur',
-            role: 'Founder & SEO Manager',
-            company: 'Personal Projects',
-            location: 'Remote',
-            highlights: [
-                'Created and managed 20+ successful niche sites',
-                'Generated €1M+ annual revenue on Amazon in 2020',
-                'Reached 200k+ monthly organic visitors on portfolio'
-            ],
-            color: 'chart-2'
-        },
-        {
             period: '2018 - 2024',
             type: 'Client',
-            role: 'SEO Consultant',
+            role: 'SEO Specialist',
             company: 'L10 Brand',
             location: 'Remote',
             highlights: [
@@ -40,11 +27,11 @@ export const ExperienceTimeline = () => {
                 'Generated 250-300 qualified monthly leads from organic traffic',
                 '4-5% conversion rate from visitors to clients'
             ],
-            color: 'chart-3'
+            color: 'chart-2'
         },
         {
             period: '2017 - 2019',
-            type: 'Collaborator',
+            type: 'Client',
             role: 'SEO Specialist',
             company: 'Stepstone Group',
             location: 'Remote',
@@ -53,11 +40,11 @@ export const ExperienceTimeline = () => {
                 'Achieved rankings for competitive keywords',
                 'Good&Co: Doubled organic traffic in 12 months'
             ],
-            color: 'chart-4'
+            color: 'chart-3'
         },
         {
             period: '2016 - 2017',
-            type: 'Full-time',
+            type: 'In-House',
             role: 'SEO Manager',
             company: 'Gromia',
             location: 'Milan',
@@ -66,33 +53,33 @@ export const ExperienceTimeline = () => {
                 'Generated 1,200-1,500 qualified monthly leads',
                 'Implemented complete blog strategy'
             ],
-            color: 'chart-5'
+            color: 'chart-4'
         },
         {
             period: '2015 - 2016',
-            type: 'Full-time',
+            type: 'In-House',
             role: 'SEO Specialist',
-            company: 'Digital Marketing Agency',
+            company: 'Visibility IQ',
             location: 'London',
             highlights: [
                 'Managed SEO campaigns for multiple clients',
                 'Link building campaigns for UK clients',
                 'Developed international SEO expertise'
             ],
-            color: 'chart-1'
+            color: 'chart-5'
         },
         {
-            period: '2014',
-            type: 'Internship',
+            period: '2014 - 2015',
+            type: 'Internship + Collaboration',
             role: 'SEO Intern',
             company: 'PokerStars',
             location: 'Remote',
             highlights: [
                 'Content writing and on-page SEO',
                 'Discovered passion for search optimization',
-                'Learned SEO fundamentals'
+                'Continued collaboration post-internship'
             ],
-            color: 'chart-2'
+            color: 'chart-1'
         }
     ];
 
@@ -183,7 +170,7 @@ export const ExperienceTimeline = () => {
                     </h3>
                     <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                         I fell in love with SEO during an internship at PokerStars in 2014 and continued collaborating with them. 
-                        Then I moved to London to work at a marketing agency, came back to Milan for a year and a half, 
+                        Then I moved to London to work at Visibility IQ, came back to Milan for Gromia, 
                         and finally started collaborating with direct clients and personal projects. What started as curiosity 
                         became a passion that has allowed me to help dozens of clients achieve measurable growth.
                     </p>

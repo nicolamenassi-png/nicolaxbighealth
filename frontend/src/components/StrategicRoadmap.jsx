@@ -13,15 +13,15 @@ const pillars = [
     {
         icon: Search,
         number: '01',
-        title: 'Deep Technical Mapping',
-        description: 'Initial exhaustive audit using Screaming Frog and log analysis. Deep-dive into site architecture, rendering issues, and accessibility to ensure a flawless foundation for clinical-grade content.',
-        tags: ['Technical SEO', 'Audit', 'Architecture']
+        title: 'Comprehensive Technical Mapping & Infrastructure',
+        description: 'A massive foundational phase involving a 360-degree technical mapping of the entire digital ecosystem. From deep-dive architectural audits and rendering optimization to accessibility and crawlability, I establish a flawless, clinical-grade infrastructure that serves as the bedrock for all future growth.',
+        tags: ['Technical SEO', 'Architecture', 'Crawlability']
     },
     {
         icon: Activity,
         number: '02',
-        title: 'Real-Time Monitoring & Automation',
-        description: 'Moving beyond static audits. I will implement custom Looker Studio dashboards to monitor crawl budget, status codes, and canonical health in real-time. If something breaks, we fix it before Google notices.',
+        title: 'Real-Time Governance & Automated Monitoring',
+        description: 'Moving beyond point-in-time audits to a model of continuous vigilance. I build bespoke monitoring architectures and advanced data-visualization systems to track every critical technical signal—from crawl health and indexing to status-code integrity—ensuring the platform remains resilient and high-performing in real-time.',
         tags: ['Dashboards', 'Automation', 'Monitoring']
     },
     {
@@ -56,18 +56,13 @@ const pillars = [
 
 const PillarCard = ({ pillar, index }) => {
     const Icon = pillar.icon;
-    const isEven = index % 2 === 0;
     
     return (
-        <div 
-            className={`group relative bg-card rounded-2xl border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden ${
-                isEven ? 'md:translate-y-0' : 'md:translate-y-8'
-            }`}
-        >
+        <div className="group relative bg-card rounded-2xl border border-border hover:border-primary/40 transition-all duration-500 overflow-hidden h-full flex flex-col">
             {/* Subtle gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
-            <div className="relative p-6 lg:p-8">
+            <div className="relative p-6 lg:p-8 flex flex-col flex-1">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center gap-4">
@@ -86,12 +81,12 @@ const PillarCard = ({ pillar, index }) => {
                 </h3>
 
                 {/* Description */}
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
                     {pillar.description}
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-auto">
                     {pillar.tags.map((tag, idx) => (
                         <span 
                             key={idx}
@@ -108,7 +103,7 @@ const PillarCard = ({ pillar, index }) => {
 
 export const StrategicRoadmap = () => {
     return (
-        <section id="roadmap" className="section-padding bg-background relative overflow-hidden">
+        <section id="my-vision-big-health" className="section-padding bg-background relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-1/4 -right-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -118,9 +113,9 @@ export const StrategicRoadmap = () => {
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="badge-bighealth mb-4">Strategic Framework</span>
+                    <span className="badge-bighealth mb-4">Operational Roadmap</span>
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-foreground mb-6">
-                        Operational Roadmap
+                        My Vision for Big Health
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed">
                         A comprehensive 6-pillar strategy designed to transform Big Health&apos;s 
@@ -128,8 +123,8 @@ export const StrategicRoadmap = () => {
                     </p>
                 </div>
 
-                {/* Pillars Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                {/* Pillars Grid with proper gap */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                     {pillars.map((pillar, index) => (
                         <PillarCard key={index} pillar={pillar} index={index} />
                     ))}

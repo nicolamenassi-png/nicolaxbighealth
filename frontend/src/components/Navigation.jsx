@@ -17,7 +17,7 @@ export const Navigation = () => {
     const navLinks = [
         { href: '#about', label: 'About' },
         { href: '#experience', label: 'Experience' },
-        { href: '#roadmap', label: 'Strategy' },
+        { href: '#my-vision-big-health', label: 'Strategy' },
         { href: '#skills', label: 'Skills' },
     ];
 
@@ -63,10 +63,12 @@ export const Navigation = () => {
                             <Mail className="w-4 h-4" />
                             Contact
                         </a>
-                        <Button className="btn-bighealth">
-                            <Download className="w-4 h-4" />
-                            My Vision for Big Health
-                        </Button>
+                        <a href="#my-vision-big-health">
+                            <Button className="btn-bighealth">
+                                <Download className="w-4 h-4" />
+                                My Vision for Big Health
+                            </Button>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -105,10 +107,15 @@ export const Navigation = () => {
                                     <Mail className="w-4 h-4" />
                                     Contact Me
                                 </a>
-                                <Button className="btn-bighealth w-full justify-center">
-                                    <Download className="w-4 h-4" />
-                                    My Vision for Big Health
-                                </Button>
+                                <a 
+                                    href="#my-vision-big-health"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                >
+                                    <Button className="btn-bighealth w-full justify-center">
+                                        <Download className="w-4 h-4" />
+                                        My Vision for Big Health
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                     </div>

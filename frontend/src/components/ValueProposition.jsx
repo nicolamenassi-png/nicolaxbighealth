@@ -1,45 +1,24 @@
-import { TrendingUp, Globe, LineChart, ArrowRight, Heart, Users, Building } from 'lucide-react';
+import { Shield, Users, Globe, ArrowRight } from 'lucide-react';
 
 export const ValueProposition = () => {
     const highlights = [
         {
-            percentage: '200%',
-            label: 'Average traffic growth',
+            icon: Shield,
+            title: 'Clinical Integrity & E-E-A-T',
+            subtitle: '100% compliance with YMYL guidelines to protect visibility during Google Updates.',
             color: 'chart-1'
         },
         {
-            percentage: '4-5%',
-            label: 'Conversion rate achieved',
+            icon: Users,
+            title: 'Patient Search Intent',
+            subtitle: 'Mapping complex mental health needs to ensure patients find safe, evidence-based digital treatments.',
             color: 'chart-2'
         },
         {
-            percentage: '100k+',
-            label: 'Monthly visitors generated',
+            icon: Globe,
+            title: 'Scalable Evidence-Based Reach',
+            subtitle: 'Building a technical infrastructure to scale non-drug treatments to millions worldwide.',
             color: 'chart-3'
-        }
-    ];
-
-    const audiences = [
-        {
-            icon: Heart,
-            title: 'For Mission-Driven Companies',
-            description: 'Help organizations with meaningful missions reach the people who need them most through organic visibility and content strategy.',
-            cta: 'Learn More',
-            ctaLink: '#experience'
-        },
-        {
-            icon: Users,
-            title: 'For Healthcare & Wellness',
-            description: 'Specialized experience in healthcare-adjacent industries, understanding the nuances of health content and audience needs.',
-            cta: 'See Projects',
-            ctaLink: '#projects'
-        },
-        {
-            icon: Building,
-            title: 'For Growing Teams',
-            description: 'Build scalable SEO processes that grow with your organization, from startup to enterprise level.',
-            cta: 'View Skills',
-            ctaLink: '#skills'
         }
     ];
 
@@ -59,64 +38,40 @@ export const ValueProposition = () => {
                     </p>
                 </div>
 
-                {/* Metrics row */}
-                <div className="flex flex-wrap justify-center gap-8 mb-20">
+                {/* Value Circles */}
+                <div className="flex flex-wrap justify-center gap-12 lg:gap-16 mb-16">
                     {highlights.map((item, index) => (
-                        <div key={index} className="text-center">
-                            <div className="relative inline-block">
-                                {/* Circular progress indicator */}
-                                <svg className="w-32 h-32" viewBox="0 0 100 100">
-                                    <circle
-                                        cx="50"
-                                        cy="50"
-                                        r="45"
-                                        fill="none"
-                                        stroke="hsl(var(--border))"
-                                        strokeWidth="6"
+                        <div key={index} className="text-center max-w-xs">
+                            <div className="relative inline-block mb-6">
+                                {/* Circular container */}
+                                <div 
+                                    className="w-36 h-36 rounded-full flex items-center justify-center"
+                                    style={{ 
+                                        background: `linear-gradient(135deg, hsl(var(--${item.color}) / 0.15) 0%, hsl(var(--${item.color}) / 0.05) 100%)`,
+                                        border: `3px solid hsl(var(--${item.color}) / 0.3)`
+                                    }}
+                                >
+                                    <item.icon 
+                                        className="w-14 h-14" 
+                                        style={{ color: `hsl(var(--${item.color}))` }}
                                     />
-                                    <circle
-                                        cx="50"
-                                        cy="50"
-                                        r="45"
-                                        fill="none"
-                                        stroke={`hsl(var(--${item.color}))`}
-                                        strokeWidth="6"
-                                        strokeLinecap="round"
-                                        strokeDasharray={`${(70 + index * 10)} 283`}
-                                        transform="rotate(-90 50 50)"
-                                        className="transition-all duration-1000"
-                                    />
-                                </svg>
-                                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                    <span className="text-2xl font-bold text-foreground">{item.percentage}</span>
                                 </div>
                             </div>
-                            <p className="text-sm text-muted-foreground mt-3 max-w-[120px] mx-auto">{item.label}</p>
+                            <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed">{item.subtitle}</p>
                         </div>
                     ))}
                 </div>
 
-                {/* Value cards */}
-                <div className="grid md:grid-cols-3 gap-6">
-                    {audiences.map((item, index) => (
-                        <div 
-                            key={index}
-                            className="group bg-background rounded-2xl p-8 border border-border hover:border-primary/30 hover:shadow-bighealth-hover transition-all duration-300"
-                        >
-                            <div className="w-12 h-12 rounded-xl bg-accent-soft flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                                <item.icon className="w-6 h-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-semibold text-foreground mb-3">{item.title}</h3>
-                            <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
-                            <a 
-                                href={item.ctaLink}
-                                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-hover transition-colors"
-                            >
-                                {item.cta}
-                                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                        </div>
-                    ))}
+                {/* CTA */}
+                <div className="text-center">
+                    <a 
+                        href="#my-vision-big-health"
+                        className="inline-flex items-center gap-2 text-primary font-medium hover:text-primary-hover transition-colors"
+                    >
+                        See my strategic approach
+                        <ArrowRight className="w-4 h-4" />
+                    </a>
                 </div>
             </div>
         </section>
