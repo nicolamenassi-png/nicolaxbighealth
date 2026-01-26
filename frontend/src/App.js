@@ -6,9 +6,7 @@ import { ValueProposition } from "@/components/ValueProposition";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { StrategicRoadmap } from "@/components/StrategicRoadmap";
 import { SkillsSection } from "@/components/SkillsSection";
-import { TestimonialSection } from "@/components/TestimonialSection";
 import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
 
 const HomePage = () => {
   return (
@@ -20,10 +18,8 @@ const HomePage = () => {
         <ExperienceTimeline />
         <StrategicRoadmap />
         <SkillsSection />
-        <TestimonialSection />
         <ContactSection />
       </main>
-      <Footer />
     </div>
   );
 };
