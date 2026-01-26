@@ -65,7 +65,7 @@ export const Navigation = () => {
                         </a>
                         <Button className="btn-bighealth">
                             <Download className="w-4 h-4" />
-                            My Vision
+                            My Vision for Big Health
                         </Button>
                     </div>
 
