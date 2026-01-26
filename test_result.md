@@ -285,13 +285,20 @@ metadata:
   test_sequence: 1
 
 test_plan:
-  current_focus: []
+  current_focus:
+    - "Navigation functionality - NEW Strategy link"
+    - "NEW Operational Roadmap Section"
+    - "Hero Section display - NEW CTA button text"
+    - "Footer Section - NEW Strategy link"
+    - "Mobile Responsiveness - NEW Roadmap section"
   stuck_tasks: []
-  test_all: true
-  test_priority: "completed"
+  test_all: false
+  test_priority: "high_first"
 
 agent_communication:
   - agent: "testing"
     message: "Starting comprehensive UI testing of Nicola Menassi CV website. Will test all sections systematically using Playwright automation."
   - agent: "testing"
     message: "COMPREHENSIVE TESTING COMPLETED SUCCESSFULLY - All sections of the Nicola Menassi CV website are working correctly. Navigation, hero section, value proposition, experience timeline, projects, skills, testimonials, contact form, footer, and mobile responsiveness all passed testing. Website is fully functional and ready for use."
+  - agent: "testing"
+    message: "NEW TESTING PHASE - Focusing on updated Big Health CV website changes: Strategy navigation link, new Operational Roadmap section with 6 pillars, updated CTA button text, footer updates, and mobile responsiveness for new section."
