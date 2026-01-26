@@ -125,36 +125,6 @@ export const SkillsSection = () => {
                         ))}
                     </div>
                 </div>
-
-                {/* Clinical Validation Style Stats */}
-                <div className="mt-16 text-center">
-                    <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4">
-                        Industry-leading results. In other words,{' '}
-                        <span className="italic text-primary">it just works</span>
-                    </h3>
-                    <p className="text-muted-foreground mb-10">Validated through real results across multiple industries</p>
-                    
-                    <div className="flex flex-wrap justify-center gap-6">
-                        <div className="stat-card min-w-[180px]">
-                            <div className="stat-number">50+</div>
-                            <div className="text-sm text-muted-foreground mt-2">
-                                Projects<br />completed
-                            </div>
-                        </div>
-                        <div className="stat-card min-w-[180px]">
-                            <div className="stat-number">10+</div>
-                            <div className="text-sm text-muted-foreground mt-2">
-                                International<br />markets
-                            </div>
-                        </div>
-                        <div className="stat-card min-w-[180px]">
-                            <div className="stat-number">€1M+</div>
-                            <div className="text-sm text-muted-foreground mt-2">
-                                Revenue<br />generated
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     );
