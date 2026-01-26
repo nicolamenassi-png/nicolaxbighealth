@@ -231,13 +231,25 @@ frontend:
         agent: "testing"
         comment: "✅ PASSED - All form fields (name, email, company, message) working correctly, form submission successful with toast notification appearing, PDF download button functional, email link (nicola.menassi@gmail.com) visible and working"
 
-  - task: "Footer Section"
+  - task: "NEW Operational Roadmap Section"
     implemented: true
-    working: true
+    working: "NA"
+    file: "/app/frontend/src/components/StrategicRoadmap.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "NEW SECTION - Need to verify Strategic Framework badge, Operational Roadmap title, all 6 strategic pillars with proper content, hover effects, and bottom CTA section"
+
+  - task: "Footer Section - NEW Strategy link"
+    implemented: true
+    working: "NA"
     file: "/app/frontend/src/components/Footer.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "testing"
@@ -245,14 +257,17 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ PASSED - Footer displaying correctly with Explore and Resources sections visible, email link functional, proper layout and styling maintained"
+      - working: "NA"
+        agent: "testing"
+        comment: "NEW CHANGES - Need to verify 'Strategy' link appears in footer Explore section instead of 'Projects'"
 
-  - task: "Mobile Responsiveness"
+  - task: "Mobile Responsiveness - NEW Roadmap section"
     implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/App.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "testing"
@@ -260,6 +275,9 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ PASSED - Mobile hamburger menu visible and functional, mobile menu opens/closes correctly, mobile navigation links working, content stacks properly on mobile viewport (375px), responsive design working across different screen sizes"
+      - working: "NA"
+        agent: "testing"
+        comment: "NEW CHANGES - Need to test mobile responsiveness specifically for the new Operational Roadmap section at 375px width to ensure pillars stack properly"
 
 metadata:
   created_by: "testing_agent"
