@@ -102,16 +102,16 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the Big Health style CV website for Nicola Menassi - comprehensive UI and functionality testing"
+user_problem_statement: "Test the updated Big Health style CV website focusing on NEW changes: Strategy navigation link, Operational Roadmap section, updated CTA buttons, and mobile responsiveness"
 
 frontend:
-  - task: "Navigation functionality"
+  - task: "Navigation functionality - NEW Strategy link"
     implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/components/Navigation.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "testing"
@@ -119,6 +119,9 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ PASSED - Logo visible, all nav links (About, Experience, Projects, Skills) working, Contact and My Vision buttons functional, smooth scroll navigation working correctly"
+      - working: "NA"
+        agent: "testing"
+        comment: "NEW CHANGES - Need to test updated navigation with 'Strategy' link replacing 'Projects', verify it scrolls to #roadmap section, and test updated CTA button text 'My Vision for Big Health'"
 
   - task: "Hero Section display"
     implemented: true
