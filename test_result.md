@@ -123,13 +123,13 @@ frontend:
         agent: "testing"
         comment: "NEW CHANGES - Need to test updated navigation with 'Strategy' link replacing 'Projects', verify it scrolls to #roadmap section, and test updated CTA button text 'My Vision for Big Health'"
 
-  - task: "Hero Section display"
+  - task: "Hero Section display - NEW CTA button text"
     implemented: true
-    working: true
+    working: "NA"
     file: "/app/frontend/src/components/HeroSection.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
       - working: "NA"
         agent: "testing"
@@ -137,6 +137,9 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ PASSED - Main headline visible, all stats cards (11+, 50+, 10+, 100+) displaying correctly, Mental Health and SEO Strategy floating badges visible, Get in Touch and My Vision CTA buttons functional"
+      - working: "NA"
+        agent: "testing"
+        comment: "NEW CHANGES - Need to verify updated CTA button text now shows 'My Vision for Big Health' instead of just 'My Vision'"
 
   - task: "Value Proposition Section"
     implemented: true
