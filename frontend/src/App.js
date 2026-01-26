@@ -4,7 +4,7 @@ import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { ValueProposition } from "@/components/ValueProposition";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
-import { ProjectsSection } from "@/components/ProjectsSection";
+import { StrategicRoadmap } from "@/components/StrategicRoadmap";
 import { SkillsSection } from "@/components/SkillsSection";
 import { TestimonialSection } from "@/components/TestimonialSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -18,7 +18,7 @@ const HomePage = () => {
         <HeroSection />
         <ValueProposition />
         <ExperienceTimeline />
-        <ProjectsSection />
+        <StrategicRoadmap />
         <SkillsSection />
         <TestimonialSection />
         <ContactSection />

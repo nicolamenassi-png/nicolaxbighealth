@@ -17,7 +17,7 @@ export const Navigation = () => {
     const navLinks = [
         { href: '#about', label: 'About' },
         { href: '#experience', label: 'Experience' },
-        { href: '#projects', label: 'Projects' },
+        { href: '#roadmap', label: 'Strategy' },
         { href: '#skills', label: 'Skills' },
     ];
 
@@ -107,7 +107,7 @@ export const Navigation = () => {
                                 </a>
                                 <Button className="btn-bighealth w-full justify-center">
                                     <Download className="w-4 h-4" />
-                                    Download My Vision
+                                    My Vision for Big Health
                                 </Button>
                             </div>
                         </div>
