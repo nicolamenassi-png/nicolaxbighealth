@@ -102,10 +102,10 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Test the updated Big Health style CV website focusing on NEW changes: Strategy navigation link, Operational Roadmap section, updated CTA buttons, and mobile responsiveness"
+user_problem_statement: "Test the Nicola Menassi CV website with COMPLETELY NEW STRUCTURE: Navigation with only 2 links (no anchor links), home page with VisionTeaser replacing StrategicRoadmap, new /vision page with full vision content, and mobile responsiveness at 375px"
 
 frontend:
-  - task: "Navigation functionality - NEW Strategy link"
+  - task: "Navigation - 2 links only (no anchor links)"
     implemented: true
     working: true
     file: "/app/frontend/src/components/Navigation.jsx"
@@ -125,8 +125,14 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ PASSED - Strategy link successfully replaces Projects in navigation, scrolls correctly to #roadmap section, CTA button text updated to 'My Vision for Big Health', mobile navigation working perfectly"
+      - working: "NA"
+        agent: "testing"
+        comment: "MAJOR RESTRUCTURE - Navigation completely changed to only 2 links: 'About Nicola (me)' → / and 'My Vision for Big Health' → /vision. NO MORE anchor links. Need to verify this new structure on both desktop and mobile."
+      - working: true
+        agent: "testing"
+        comment: "✅ PASSED - Navigation successfully restructured with ONLY 2 main links: 'About Nicola (me)' linking to / (home) and 'My Vision for Big Health' linking to /vision page. Logo 'NM Nicola Menassi' correctly links to home. NO anchor links present. Mobile hamburger menu shows same 2 links. Navigation working perfectly on both desktop and mobile."
 
-  - task: "Hero Section display - NEW CTA button text"
+  - task: "Hero Section - CTA button links to /vision page"
     implemented: true
     working: true
     file: "/app/frontend/src/components/HeroSection.jsx"
@@ -146,6 +152,12 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ PASSED - CTA button text successfully updated to 'My Vision for Big Health' in both navigation and hero section, all other elements working correctly"
+      - working: "NA"
+        agent: "testing"
+        comment: "MAJOR CHANGE - Hero CTA button should now navigate to /vision page (not anchor link). Need to verify button text and link destination."
+      - working: true
+        agent: "testing"
+        comment: "✅ PASSED - Hero section displays correct headline 'The Strategic Value I Bring to Big Health'. CTA button 'My Vision for Big Health' successfully links to /vision page (NOT anchor link). All stats cards (11+, 50+, 10+, 100+) and floating badges (Mental Health, SEO Strategy) displaying correctly."
 
   - task: "Value Proposition Section"
     implemented: true
@@ -237,27 +249,42 @@ frontend:
         agent: "testing"
         comment: "✅ PASSED - All form fields (name, email, company, message) working correctly, form submission successful with toast notification appearing, PDF download button functional, email link (nicola.menassi@gmail.com) visible and working"
 
-  - task: "NEW Operational Roadmap Section"
+  - task: "VisionTeaser Section - Replaces StrategicRoadmap"
     implemented: true
     working: true
-    file: "/app/frontend/src/components/StrategicRoadmap.jsx"
+    file: "/app/frontend/src/components/VisionTeaser.jsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: false
     status_history:
       - working: "NA"
         agent: "testing"
-        comment: "NEW SECTION - Need to verify Strategic Framework badge, Operational Roadmap title, all 6 strategic pillars with proper content, hover effects, and bottom CTA section"
+        comment: "NEW SECTION - Old StrategicRoadmap section should be REPLACED with VisionTeaser section containing: Badge 'My Vision for Big Health', Quote text about 2026 visibility, CTA button 'Read my vision for Big Health →' linking to /vision"
       - working: true
         agent: "testing"
-        comment: "✅ PASSED - Strategic Framework badge visible, Operational Roadmap title correct, all 6 strategic pillars present with correct titles (Deep Technical Mapping, Real-Time Monitoring & Automation, Market Intelligence & Competitor Gap, Semantic Authority, Creative Outreach & Authority Building, GEO Strategy), each pillar has icon/description/tags, hover effects working, bottom CTA 'Ready to implement this strategy?' with 'Let's Discuss' button scrolls to contact section"
+        comment: "✅ PASSED - VisionTeaser section successfully replaces old StrategicRoadmap on home page. Badge 'My Vision for Big Health' visible. Quote text 'In 2026, visibility means something different. I can build organic systems...' present. CTA button 'Read my vision for Big Health →' correctly links to /vision page. Old StrategicRoadmap section confirmed removed from home page."
 
-  - task: "Footer Section - NEW Strategy link"
+  - task: "Vision Page - New /vision route with full content"
     implemented: true
     working: true
-    file: "/app/frontend/src/components/Footer.jsx"
+    file: "/app/frontend/src/pages/VisionPage.jsx"
     stuck_count: 0
     priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "testing"
+        comment: "NEW PAGE - Need to verify /vision page exists with: same 2-link navigation, title 'My Vision for Big Health', opening quote, Section 1 (competitive advantage), Section 2 (search journey with 3 layers), Section 3 (SEO to GEO), Section 4 (AI systems), Section 5 (E-E-A-T), Section 6 (30 days plan), closing CTA with email"
+      - working: true
+        agent: "testing"
+        comment: "✅ PASSED - Vision page (/vision) fully functional with all required content: ✓ Same 2-link navigation (About Nicola, My Vision for Big Health) ✓ Title 'My Vision for Big Health' ✓ Opening quote about people searching for help ✓ Section 1: 'The competitive advantage Big Health isn't fully using yet' ✓ Section 2: 'Where patients search, and where the real opportunity lives' with Layer 1 (symptom), Layer 2 (solution), Layer 3 (product) cards ✓ Section 3: 'The next wave of patient discovery is already here' (SEO → GEO) ✓ Section 4: 'AI as an accelerator, not a replacement' with AI system cards (Mixed-AI editorial, AI content refresh, Technical health monitor, Brand & AI visibility tracking) ✓ Section 5: 'Clinical evidence is your SEO moat — here's how to deploy it' (E-E-A-T) with all 4 assets (100+ publications, NHS Scotland, Clinical team, RCT data) ✓ Section 6: 'What I'd do in the first month' with Weeks 1-2 and 3-4 plans ✓ Closing CTA: 'Get in touch — nicola.menassi@gmail.com' button. All sections verified present and displaying correctly."
+
+  - task: "Footer Section - NEW Strategy link"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/components/Footer.jsx"
+    stuck_count: 0
+    priority: "low"
     needs_retesting: false
     status_history:
       - working: "NA"
@@ -272,8 +299,11 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ PASSED - Strategy link successfully added to footer Explore section, Projects link removed, all other footer functionality working correctly"
+      - working: "NA"
+        agent: "testing"
+        comment: "NEW STRUCTURE - Footer may not be present on new vision page design. Need to verify if footer exists and if it should be removed per new requirements."
 
-  - task: "Mobile Responsiveness - NEW Roadmap section"
+  - task: "Mobile Responsiveness - 375px width"
     implemented: true
     working: true
     file: "/app/frontend/src/App.js"
@@ -293,11 +323,17 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ PASSED - Mobile responsiveness excellent for new Roadmap section: pillars stack properly vertically at 375px width, mobile navigation includes Strategy link, mobile CTA buttons functional, bottom CTA works on mobile, footer Strategy link visible on mobile"
+      - working: "NA"
+        agent: "testing"
+        comment: "NEW STRUCTURE - Need to test mobile responsiveness at 375px for: hamburger menu with 2 links, home page with VisionTeaser section, /vision page readability and layer cards stacking"
+      - working: true
+        agent: "testing"
+        comment: "✅ PASSED - Mobile responsiveness excellent at 375px width: ✓ Hamburger menu button visible and functional ✓ Mobile menu opens/closes correctly showing 2 navigation links (About Nicola, My Vision for Big Health) ✓ Home page displays correctly with VisionTeaser section readable ✓ Vision page title visible on mobile ✓ Layer cards (Layer 1, 2, 3) stack properly and are readable on mobile ✓ All sections of vision page accessible and readable on mobile viewport. Mobile experience fully functional."
 
 metadata:
   created_by: "testing_agent"
-  version: "1.0"
-  test_sequence: 1
+  version: "2.0"
+  test_sequence: 2
 
 test_plan:
   current_focus: []
@@ -316,3 +352,5 @@ agent_communication:
     message: "NEW CHANGES TESTING COMPLETED SUCCESSFULLY - All NEW Big Health CV website updates are working perfectly: ✅ Strategy link replaces Projects in navigation/footer ✅ CTA buttons updated to 'My Vision for Big Health' ✅ New Operational Roadmap section with all 6 strategic pillars functioning correctly ✅ Mobile responsiveness excellent for all new features ✅ All navigation, hover effects, and CTAs working as expected. Website ready for production use."
   - agent: "testing"
     message: "FINAL BIG HEALTH CV TESTING COMPLETED - Comprehensive verification of all specific requirements: ✅ Hero Section: Correct headline 'The Strategic Value I Bring to Big Health', proper subheadline, ONLY ONE CTA button linking to #my-vision-big-health ✅ Navigation: Strategy link exists and links correctly, primary CTA button text correct ✅ Value Proposition Circles: All 3 circles correct (Clinical Integrity & E-E-A-T with YMYL compliance, Patient Search Intent with mental health mapping, Scalable Evidence-Based Reach with infrastructure scaling) ✅ Experience Timeline Labels: All companies have correct labels (L10 Brand [Client], Stepstone [Client], Gromia [In-House], Visibility IQ [In-House], PokerStars [Internship + Collaboration]) ✅ Strategic Roadmap Section: Correct ID #my-vision-big-health, 'Operational Roadmap' badge, 'My Vision for Big Health' heading, all 6 pillar cards displayed with proper spacing ✅ Contact Section: Simple layout with email button and 'Download My Vision' button, no footer present. ALL REQUIREMENTS VERIFIED AND WORKING PERFECTLY."
+  - agent: "testing"
+    message: "MAJOR RESTRUCTURE TESTING COMPLETED - Comprehensive testing of COMPLETELY NEW website structure with React Router navigation: ✅ Navigation restructured to ONLY 2 links (no anchor links): 'About Nicola (me)' → / and 'My Vision for Big Health' → /vision ✅ Hero CTA button 'My Vision for Big Health' navigates to /vision page (not anchor link) ✅ VisionTeaser section successfully replaces old StrategicRoadmap on home page with badge, quote, and CTA linking to /vision ✅ NEW /vision page fully functional with all 6 sections: competitive advantage, search journey (3 layers), SEO→GEO, AI systems, E-E-A-T (4 assets), 30-day plan, and closing CTA ✅ Mobile responsiveness excellent at 375px: hamburger menu with 2 links, VisionTeaser readable, vision page sections stack properly ✅ All navigation between pages working correctly. Website fully functional with new structure and ready for production."

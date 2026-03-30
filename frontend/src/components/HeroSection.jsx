@@ -1,5 +1,5 @@
-import { ArrowRight, Download, Sparkles, Heart, Brain } from 'lucide-react';
-import { Button } from './ui/button';
+import { ArrowRight, Sparkles, Heart, Brain } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const HeroSection = () => {
     const stats = [
@@ -43,10 +43,10 @@ export const HeroSection = () => {
 
                         {/* Single CTA Button */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a href="#my-vision-big-health" className="btn-bighealth text-base px-8 py-4">
+                            <Link to="/vision" className="btn-bighealth text-base px-8 py-4">
                                 My Vision for Big Health
                                 <ArrowRight className="w-5 h-5" />
-                            </a>
+                            </Link>
                         </div>
 
                         {/* Trust indicators */}

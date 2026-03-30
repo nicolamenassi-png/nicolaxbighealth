@@ -4,9 +4,10 @@ import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { ValueProposition } from "@/components/ValueProposition";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
-import { StrategicRoadmap } from "@/components/StrategicRoadmap";
+import { VisionTeaser } from "@/components/VisionTeaser";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ContactSection } from "@/components/ContactSection";
+import { VisionPage } from "@/pages/VisionPage";
 
 const HomePage = () => {
   return (
@@ -16,7 +17,7 @@ const HomePage = () => {
         <HeroSection />
         <ValueProposition />
         <ExperienceTimeline />
-        <StrategicRoadmap />
+        <VisionTeaser />
         <SkillsSection />
         <ContactSection />
       </main>
@@ -30,6 +31,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/vision" element={<VisionPage />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="bottom-right" richColors />
